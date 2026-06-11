@@ -33,11 +33,11 @@
 
 ### 1. 初始化数据库
 
-执行 `hm-dianping/src/main/resources/db/hmdp.sql` 导入表结构和初始数据。
+执行 `locallife/src/main/resources/db/hmdp.sql` 导入表结构和初始数据。
 
 ### 2. 修改配置
 
-编辑 `hm-dianping/src/main/resources/application.yaml`，修改数据库和 Redis 连接信息：
+编辑 `locallife/src/main/resources/application.yaml`，修改数据库和 Redis 连接信息：
 
 ```yaml
 spring:
@@ -53,7 +53,7 @@ spring:
 ### 3. 启动项目
 
 ```bash
-cd hm-dianping
+cd locallife
 mvn spring-boot:run
 ```
 
@@ -62,7 +62,7 @@ mvn spring-boot:run
 ## 📁 项目结构
 
 ```
-hm-dianping/
+locallife/
 ├── src/main/java/com/hmdp/
 │   ├── config/          # 配置类（MVC、MyBatis、Redisson）
 │   ├── controller/      # 控制器层
