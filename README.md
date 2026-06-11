@@ -1,8 +1,8 @@
-﻿# 🍜 黑马点评 (HeiMa DianPing)
+﻿# 本地生活优选平台
 
 基于 Spring Boot 构建的生活服务点评平台，实现商户浏览、用户互动、优惠券秒杀等核心功能。
 
-## 🛠 技术栈
+## 技术栈
 
 - **后端框架**：Spring Boot 2.3.12
 - **ORM**：MyBatis-Plus 3.4.3
@@ -12,17 +12,17 @@
 - **构建工具**：Maven
 - **语言**：Java 8
 
-## ✨ 核心功能
+## 核心功能
 
 | 模块 | 功能 | 技术亮点 |
 |------|------|----------|
-| 🏪 商户管理 | 商户列表、详情查询、分类筛选 | Redis 缓存 + 缓存穿透防护 |
-| 👤 用户系统 | 注册登录、个人信息、Token 刷新 | Session 共享 + 登录拦截器 |
-| 📝 笔记动态 | 发布笔记、评论互动、点赞 | 滚动分页查询 |
-| 🔔 关注取关 | 关注用户、共同关注 | Redis Set 交集运算 |
-| 🎫 优惠券秒杀 | 秒杀下单、库存扣减、一人一单 | Lua 脚本 + 分布式锁 + Redisson |
+| 商户管理 | 商户列表、详情查询、分类筛选 | Redis 缓存 + 缓存穿透防护 |
+| 用户系统 | 注册登录、个人信息、Token 刷新 | Session 共享 + 登录拦截器 |
+| 笔记动态 | 发布笔记、评论互动、点赞 | 滚动分页查询 |
+| 关注取关 | 关注用户、共同关注 | Redis Set 交集运算 |
+| 优惠券秒杀 | 秒杀下单、库存扣减、一人一单 | Lua 脚本 + 分布式锁 + Redisson |
 
-## 🚀 快速开始
+## 快速开始
 
 ### 环境要求
 
@@ -31,35 +31,8 @@
 - MySQL 5.7+
 - Redis 6.0+
 
-### 1. 初始化数据库
 
-执行 `locallife/src/main/resources/db/hmdp.sql` 导入表结构和初始数据。
-
-### 2. 修改配置
-
-编辑 `locallife/src/main/resources/application.yaml`，修改数据库和 Redis 连接信息：
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/hmdp?useSSL=false&serverTimezone=Asia/Shanghai
-    username: root
-    password: your_password
-  redis:
-    host: localhost
-    port: 6379
-```
-
-### 3. 启动项目
-
-```bash
-cd locallife
-mvn spring-boot:run
-```
-
-启动后访问 `http://localhost:8080`。
-
-## 📁 项目结构
+📁 项目结构
 
 ```
 locallife/
@@ -79,6 +52,3 @@ locallife/
 └── pom.xml
 ```
 
-## 📄 License
-
-本项目仅供学习交流使用。
